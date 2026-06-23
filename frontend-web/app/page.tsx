@@ -1,42 +1,66 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-white p-8">
-      <h1 className="text-4xl font-bold mb-8">
-        🚀 Rust Intel Dashboard
-      </h1>
+    <div className="flex min-h-screen bg-zinc-950 text-white">
+      
+      {/* Sidebar */}
+      <aside className="w-64 bg-zinc-900 border-r border-zinc-800 p-6">
+        <h1 className="text-2xl font-bold mb-8">
+          🦀 Rust Intel
+        </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="bg-zinc-900 p-6 rounded-xl">
-          <h2 className="text-zinc-400">Jugadores Online</h2>
-          <p className="text-3xl font-bold mt-2">0</p>
+        <nav className="space-y-3">
+          <div className="hover:text-orange-400 cursor-pointer">📊 Dashboard</div>
+          <div className="hover:text-orange-400 cursor-pointer">👥 Jugadores</div>
+          <div className="hover:text-orange-400 cursor-pointer">🏷️ Clanes</div>
+          <div className="hover:text-orange-400 cursor-pointer">⭐ Favoritos</div>
+          <div className="hover:text-orange-400 cursor-pointer">🎯 Vigilados</div>
+          <div className="hover:text-orange-400 cursor-pointer">🚢 Eventos</div>
+          <div className="hover:text-orange-400 cursor-pointer">🛒 Vending</div>
+          <div className="hover:text-orange-400 cursor-pointer">📈 Estadísticas</div>
+          <div className="hover:text-orange-400 cursor-pointer">🔔 Alertas</div>
+          <div className="hover:text-orange-400 cursor-pointer">⚙️ Configuración</div>
+        </nav>
+      </aside>
+
+      {/* Contenido */}
+      <main className="flex-1 p-8">
+        <h1 className="text-4xl font-bold mb-8">
+          Dashboard
+        </h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="bg-zinc-900 p-6 rounded-xl">
+            <h2 className="text-zinc-400">Jugadores Online</h2>
+            <p className="text-3xl font-bold mt-2">0</p>
+          </div>
+
+          <div className="bg-zinc-900 p-6 rounded-xl">
+            <h2 className="text-zinc-400">Clanes Vigilados</h2>
+            <p className="text-3xl font-bold mt-2">0</p>
+          </div>
+
+          <div className="bg-zinc-900 p-6 rounded-xl">
+            <h2 className="text-zinc-400">Eventos Activos</h2>
+            <p className="text-3xl font-bold mt-2">0</p>
+          </div>
+
+          <div className="bg-zinc-900 p-6 rounded-xl">
+            <h2 className="text-zinc-400">Alertas</h2>
+            <p className="text-3xl font-bold mt-2">0</p>
+          </div>
         </div>
 
-        <div className="bg-zinc-900 p-6 rounded-xl">
-          <h2 className="text-zinc-400">Grupos Vigilados</h2>
-          <p className="text-3xl font-bold mt-2">0</p>
+        <div className="mt-8 bg-zinc-900 rounded-xl p-6">
+          <h2 className="text-2xl font-semibold mb-4">
+            Bienvenido a Rust Intel
+          </h2>
+
+          <p className="text-zinc-400">
+            Centro de inteligencia para Rust.
+          </p>
         </div>
+      </main>
 
-        <div className="bg-zinc-900 p-6 rounded-xl">
-          <h2 className="text-zinc-400">Eventos Activos</h2>
-          <p className="text-3xl font-bold mt-2">0</p>
-        </div>
-
-        <div className="bg-zinc-900 p-6 rounded-xl">
-          <h2 className="text-zinc-400">Alertas</h2>
-          <p className="text-3xl font-bold mt-2">0</p>
-        </div>
-      </div>
-
-      <div className="mt-8 bg-zinc-900 rounded-xl p-6">
-        <h2 className="text-2xl font-semibold mb-4">
-          Bienvenido a Rust Intel
-        </h2>
-
-        <p className="text-zinc-400">
-          Panel de inteligencia para seguimiento de jugadores,
-          clanes, eventos y estadísticas de Rust.
-        </p>
-      </div>
-    </main>
+    </div>
   );
 }
