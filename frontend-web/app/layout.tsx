@@ -69,6 +69,9 @@ export default function RootLayout({
               <Link href="/alertas" className="hover:text-orange-400">
                 🔔 Alertas
               </Link>
+              <Link href="/admin">
+              ⚙️ Administración
+              </Link>
             </nav>
           </aside>
 
