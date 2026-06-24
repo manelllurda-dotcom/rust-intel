@@ -63,6 +63,9 @@ export default function RootLayout({
               <Link href="/vigilados">
                 🎯 Vigilados
               </Link>
+              <Link href="/clanes-vigilados">
+              🎯 Clanes Vigilados
+              </Link>
               <Link href="/alertas" className="hover:text-orange-400">
                 🔔 Alertas
               </Link>
