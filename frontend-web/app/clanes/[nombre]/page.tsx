@@ -1,4 +1,6 @@
 import { clanes } from "../../../data/clanes";
+import { jugadores } from "../../../data/jugadores";
+import Link from "next/link";
 
 export default async function ClanPage({
   params,
@@ -21,13 +23,18 @@ export default async function ClanPage({
     );
   }
 
+  const miembros = jugadores.filter(
+    (jugador) =>
+      jugador.clan.toLowerCase() === clan.nombre.toLowerCase()
+  );
+
   return (
     <div className="p-8 text-white">
       <h1 className="text-4xl font-bold mb-8">
         🏷️ {clan.nombre}
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
         <div className="bg-zinc-900 rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-4">
@@ -37,15 +44,25 @@ export default async function ClanPage({
           <p>Miembros: {clan.miembros}</p>
           <p>Online: {clan.online}</p>
           <p>Actividad: {clan.actividad}</p>
+          <p>Ventana raid: {clan.raidWindow}</p>
         </div>
 
         <div className="bg-zinc-900 rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-4">
-            Raid
+            👥 Miembros
           </h2>
 
-          <p>Ventana: {clan.raidWindow}</p>
-          <p>Probabilidad: {clan.probabilidad}</p>
+          <div className="space-y-2">
+            {miembros.map((jugador) => (
+              <Link
+                key={jugador.nombre}
+                href={`/jugadores/${jugador.nombre.toLowerCase()}`}
+                className="block hover:text-orange-400"
+              >
+                {jugador.online ? "🟢" : "🔴"} {jugador.nombre}
+              </Link>
+            ))}
+          </div>
         </div>
 
       </div>
