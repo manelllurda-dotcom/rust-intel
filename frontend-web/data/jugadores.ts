@@ -1,26 +1,26 @@
 export const jugadores = [
   {
-    nombre: "Pedro",
+    nombre: "MANEL",
     online: true,
     clan: "GG",
     favorito: true,
+    horas: 32,
+    conexiones: 18,
   },
   {
-    nombre: "Alexx",
+    nombre: "Alex",
     online: false,
     clan: "GG",
     favorito: false,
+    horas: 18,
+    conexiones: 7,
   },
   {
     nombre: "Mike",
     online: true,
     clan: "XYZ",
     favorito: true,
-  },
-  {
-    nombre: "Juan",
-    online: false,
-    clan: "XYZ",
-    favorito: false,
+    horas: 41,
+    conexiones: 24,
   },
 ];

@@ -36,13 +36,7 @@ export default async function JugadorPage({
 
           <p>Clan: {jugador.clan}</p>
 
-          <p
-            className={
-              jugador.online
-                ? "text-green-400"
-                : "text-red-400"
-            }
-          >
+          <p className={jugador.online ? "text-green-400" : "text-red-400"}>
             Estado: {jugador.online ? "Online" : "Offline"}
           </p>
 
@@ -56,9 +50,8 @@ export default async function JugadorPage({
             Estadísticas
           </h2>
 
-          <p>Horas esta semana: 32h</p>
-          <p>Conexiones: 18</p>
-          <p>Actividad: Alta</p>
+          <p>Horas esta semana: {jugador.horas}h</p>
+          <p>Conexiones: {jugador.conexiones}</p>
         </div>
 
       </div>
