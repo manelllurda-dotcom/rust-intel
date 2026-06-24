@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { jugadores } from "../../data/jugadores";
 
 export default function JugadoresPage() {
@@ -30,7 +31,14 @@ export default function JugadoresPage() {
                 key={jugador.nombre}
                 className="border-t border-zinc-800"
               >
-                <td className="p-4">{jugador.nombre}</td>
+                <td className="p-4">
+                  <Link
+                    href={`/jugadores/${jugador.nombre.toLowerCase()}`}
+                    className="hover:text-orange-400"
+                  >
+                    {jugador.nombre}
+                  </Link>
+                </td>
 
                 <td
                   className={`p-4 ${
@@ -42,7 +50,14 @@ export default function JugadoresPage() {
                   {jugador.online ? "Online" : "Offline"}
                 </td>
 
-                <td className="p-4">{jugador.clan}</td>
+                <td className="p-4">
+                  <Link
+                    href={`/clanes/${jugador.clan.toLowerCase()}`}
+                    className="hover:text-orange-400"
+                  >
+                    {jugador.clan}
+                  </Link>
+                </td>
 
                 <td className="p-4">
                   {jugador.favorito ? "⭐" : "☆"}
