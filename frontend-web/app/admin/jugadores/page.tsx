@@ -25,10 +25,10 @@ export default function AdminJugadoresPage() {
             </div>
 
             <Link
-              href={`/jugadores/${jugador.nombre.toLowerCase()}`}
+              href={`/admin/jugadores/${jugador.nombre.toLowerCase()}`}
               className="text-orange-400"
             >
-              Ver →
+              ✏️ Editar →
             </Link>
           </div>
         ))}
