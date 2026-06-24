@@ -5,23 +5,35 @@ export default function ClanesPage() {
         🏷️ Clanes
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-zinc-900 p-6 rounded-xl">
-          <h2 className="text-2xl font-bold">GG</h2>
-          <p className="text-zinc-400 mt-2">Miembros: 8</p>
+          <div className="flex justify-between">
+            <h2 className="text-2xl font-bold">GG</h2>
+            <span>⭐</span>
+          </div>
+
+          <p className="mt-4 text-zinc-400">Miembros: 8</p>
           <p className="text-green-400">Online: 4</p>
+
+          <div className="mt-4">
+            <p>📈 Actividad alta</p>
+            <p>⏰ Ventana raid: 03:00 - 07:00</p>
+          </div>
         </div>
 
         <div className="bg-zinc-900 p-6 rounded-xl">
-          <h2 className="text-2xl font-bold">XYZ</h2>
-          <p className="text-zinc-400 mt-2">Miembros: 6</p>
+          <div className="flex justify-between">
+            <h2 className="text-2xl font-bold">XYZ</h2>
+            <span>🎯</span>
+          </div>
+
+          <p className="mt-4 text-zinc-400">Miembros: 6</p>
           <p className="text-red-400">Online: 0</p>
-        </div>
 
-        <div className="bg-zinc-900 p-6 rounded-xl">
-          <h2 className="text-2xl font-bold">ABC</h2>
-          <p className="text-zinc-400 mt-2">Miembros: 12</p>
-          <p className="text-green-400">Online: 7</p>
+          <div className="mt-4">
+            <p>📈 Actividad media</p>
+            <p>⏰ Ventana raid: 02:00 - 06:00</p>
+          </div>
         </div>
       </div>
     </div>
