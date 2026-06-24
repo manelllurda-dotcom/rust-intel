@@ -7,4 +7,8 @@ export const alertas = [
     mensaje: "Alex se ha desconectado",
     tipo: "offline",
   },
+  {
+    mensaje: "Clan GG completamente offline",
+    tipo: "warning",
+  },
 ];
