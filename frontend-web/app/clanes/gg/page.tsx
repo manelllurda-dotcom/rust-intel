@@ -1,25 +1,4 @@
-const miembros = [
-  {
-    nombre: "Pedro",
-    online: true,
-    horas: 32,
-  },
-  {
-    nombre: "Alex",
-    online: false,
-    horas: 18,
-  },
-  {
-    nombre: "Mike",
-    online: true,
-    horas: 41,
-  },
-  {
-    nombre: "Juan",
-    online: false,
-    horas: 11,
-  },
-];
+import { miembrosGG } from "../../../data/miembrosGG";
 
 export default function ClanGGPage() {
   return (
@@ -52,9 +31,10 @@ export default function ClanGGPage() {
             </thead>
 
             <tbody>
-              {miembros.map((miembro) => (
+              {miembrosGG.map((miembro) => (
                 <tr key={miembro.nombre}>
                   <td className="py-2">{miembro.nombre}</td>
+
                   <td
                     className={
                       miembro.online
@@ -64,6 +44,7 @@ export default function ClanGGPage() {
                   >
                     {miembro.online ? "Online" : "Offline"}
                   </td>
+
                   <td>{miembro.horas}h</td>
                 </tr>
               ))}
