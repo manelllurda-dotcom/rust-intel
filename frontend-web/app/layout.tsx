@@ -57,7 +57,12 @@ export default function RootLayout({
               <Link href="/estadisticas" className="hover:text-orange-400">
                 📈 Estadísticas
               </Link>
-
+              <Link href="/favoritos" className="hover:text-orange-400">
+               ⭐ Favoritos
+              </Link>
+              <Link href="/vigilados">
+                🎯 Vigilados
+              </Link>
               <Link href="/alertas" className="hover:text-orange-400">
                 🔔 Alertas
               </Link>

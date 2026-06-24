@@ -1,5 +1,10 @@
 export const alertas = [
-  "🟢 Pedro conectado",
-  "🔴 Alex desconectado",
-  "⚠️ Clan GG completamente offline",
+  {
+    mensaje: "MANEL se ha conectado",
+    tipo: "online",
+  },
+  {
+    mensaje: "Alex se ha desconectado",
+    tipo: "offline",
+  },
 ];
