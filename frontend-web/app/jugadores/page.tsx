@@ -1,3 +1,5 @@
+import { jugadores } from "../../data/jugadores";
+
 export default function JugadoresPage() {
   return (
     <div className="p-8 text-white">
@@ -23,26 +25,30 @@ export default function JugadoresPage() {
           </thead>
 
           <tbody>
-            <tr className="border-t border-zinc-800">
-              <td className="p-4">Pedro</td>
-              <td className="p-4 text-green-400">Online</td>
-              <td className="p-4">GG</td>
-              <td className="p-4">⭐</td>
-            </tr>
+            {jugadores.map((jugador) => (
+              <tr
+                key={jugador.nombre}
+                className="border-t border-zinc-800"
+              >
+                <td className="p-4">{jugador.nombre}</td>
 
-            <tr className="border-t border-zinc-800">
-              <td className="p-4">Alex</td>
-              <td className="p-4 text-red-400">Offline</td>
-              <td className="p-4">GG</td>
-              <td className="p-4">☆</td>
-            </tr>
+                <td
+                  className={`p-4 ${
+                    jugador.online
+                      ? "text-green-400"
+                      : "text-red-400"
+                  }`}
+                >
+                  {jugador.online ? "Online" : "Offline"}
+                </td>
 
-            <tr className="border-t border-zinc-800">
-              <td className="p-4">Mike</td>
-              <td className="p-4 text-green-400">Online</td>
-              <td className="p-4">XYZ</td>
-              <td className="p-4">⭐</td>
-            </tr>
+                <td className="p-4">{jugador.clan}</td>
+
+                <td className="p-4">
+                  {jugador.favorito ? "⭐" : "☆"}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

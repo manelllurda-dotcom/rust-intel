@@ -1,4 +1,5 @@
 import { miembrosGG } from "../../../data/miembrosGG";
+import { alertas } from "../../../data/alertas";
 
 export default function ClanGGPage() {
   return (
@@ -34,17 +35,9 @@ export default function ClanGGPage() {
               {miembrosGG.map((miembro) => (
                 <tr key={miembro.nombre}>
                   <td className="py-2">{miembro.nombre}</td>
-
-                  <td
-                    className={
-                      miembro.online
-                        ? "text-green-400"
-                        : "text-red-400"
-                    }
-                  >
+                  <td className={miembro.online ? "text-green-400" : "text-red-400"}>
                     {miembro.online ? "Online" : "Offline"}
                   </td>
-
                   <td>{miembro.horas}h</td>
                 </tr>
               ))}
@@ -68,9 +61,9 @@ export default function ClanGGPage() {
           </h2>
 
           <div className="space-y-2">
-            <p>🟢 Pedro conectado</p>
-            <p>🔴 Alex desconectado</p>
-            <p>⚠️ Clan GG completamente offline</p>
+            {alertas.map((alerta, index) => (
+              <p key={index}>{alerta}</p>
+            ))}
           </div>
         </div>
 
